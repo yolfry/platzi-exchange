@@ -38,16 +38,16 @@
 </template>
 
 <script>
-import PxIcon from "@/components/PxIcon.vue";
+import PxIcon from '@/components/PxIcon.vue'
 
 export default {
-  name: "PXHeader",
+  name: 'PXHeader',
   components: { PxIcon },
   data() {
-    return {};
+    return {}
   },
   methods: {}
-};
+}
 </script>
 
 <style scoped>

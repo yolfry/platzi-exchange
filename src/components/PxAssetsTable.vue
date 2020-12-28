@@ -24,12 +24,12 @@
 
 <script>
 export default {
-  name: "PxAssetsTable",
-  props: ["data", "columns"],
+  name: 'PxAssetsTable',
+  props: ['data', 'columns'],
   data() {
-    return {};
+    return {}
   },
   components: {},
   methods: {}
-};
+}
 </script>
