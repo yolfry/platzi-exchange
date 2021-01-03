@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import Error404 from '@/views/Error404'
 
+import CoinDetail from '@/views/CoinDetail'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -16,6 +18,11 @@ const routes = [
     path: '*',
     name: '404',
     component: Error404
+  },
+  {
+    path: '/coin/:id',
+    name: 'coin-detail',
+    component: CoinDetail
   }
 ]
 

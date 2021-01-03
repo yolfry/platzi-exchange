@@ -2,16 +2,24 @@
   <b-navbar>
     <template slot="brand">
       <b-navbar-item>
-        <px-icon />
+        <router-link
+          :to="{
+            name: 'home'
+          }"
+          ><px-icon
+        /></router-link>
       </b-navbar-item>
     </template>
     <template slot="start">
-      <b-navbar-item>
-        <router-link to="/">Home</router-link>
+      <b-navbar-item v-for="l in this.links" :key="l.title">
+        <router-link :to="l.to">{{ l.title }}</router-link>
       </b-navbar-item>
-      <b-navbar-item href="#">
+
+      <!--<b-navbar-item href="#">
         Documentation
       </b-navbar-item>
+
+
       <b-navbar-dropdown label="Info">
         <b-navbar-item href="#">
           About
@@ -19,10 +27,10 @@
         <b-navbar-item href="#">
           Contact
         </b-navbar-item>
-      </b-navbar-dropdown>
+      </b-navbar-dropdown>-->
     </template>
 
-    <template slot="end">
+    <!--<template slot="end">
       <b-navbar-item tag="div">
         <div class="buttons">
           <a class="button is-primary">
@@ -33,7 +41,7 @@
           </a>
         </div>
       </b-navbar-item>
-    </template>
+    </template>-->
   </b-navbar>
 </template>
 
@@ -46,7 +54,13 @@ export default {
   data() {
     return {}
   },
-  methods: {}
+  methods: {},
+  props: {
+    links: {
+      type: Array,
+      default: () => {}
+    }
+  }
 }
 </script>
 
